@@ -1,0 +1,26 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3>Editar Tarefas: </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rota_tarefas/tarefas/editar_tarefas" method="POST">
+                    
+                    {{#if tarefa}}
+                    <label for="_id">ID: </label>
+                    <input type="text" name="_id" id="_id" class="form-control" value="{{tarefa._id}}"><br>
+
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" class="form-control" value="{{tarefa.nome}}"><br>
+
+                    <label for="descricao">Descrição: </label>
+                    <input type="text" name="descricao" id="descricao" class="form-control" value="{{tarefa.descricao}}"><br>
+
+                    <button type="submit" class="btn btn-success">Editar tarefa</button>
+                    </form>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
