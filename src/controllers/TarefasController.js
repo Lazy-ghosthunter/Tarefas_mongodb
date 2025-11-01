@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router;
+const router = express.Router();
 const mongoose = require('mongoose');
 
 //carregando o model
@@ -10,7 +10,7 @@ const Tarefas = mongoose.model("tarefas");
 //abre e carrega as informaçoes de tarefas no formulario tarefas
 router.get('/tarefas', (req, res) =>{
     Tarefas.find().lean().then((tarefas) => {
-        TextDecoderStream.render("admin/tarefas/tarefas", {tarefas: tarefas});
+        res.render("admin/tarefas/tarefas", {tarefas: tarefas});
     });
 });
 

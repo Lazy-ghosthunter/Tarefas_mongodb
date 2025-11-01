@@ -12,4 +12,4 @@ const Tarefas = new Schema({
         required:true
     }
 });
-mongoose.model("tarefas, Tarefas");
+mongoose.model("tarefas", Tarefas);
